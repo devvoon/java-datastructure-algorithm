@@ -2,10 +2,10 @@ package recursion;
 
 public class Sum {
 
-	/**
-	 * resuion - 1~~n까지의 sum을 구하기
-	 * @param args
-	 */
+    /**
+     * resuion - 1~~n까지의 sum을 구하기
+     * @param args
+     */
     public static void main(String[] args) {
 
         int n = 5;
