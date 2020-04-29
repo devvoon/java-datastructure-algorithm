@@ -9,4 +9,5 @@
 
 
 ### 1.  Recursion (순환)  
-1.  Sum.java : 1 ~ n 까지의 합 구하기 (Recrusion, for)
+1.  Sum : 1 ~ n 까지의 합 구하기 (Recrusion, for)
+2.  Factorial : n! 구하기 (Recrusion, for)
