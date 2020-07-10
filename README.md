@@ -4,6 +4,8 @@
 자료구조의 기본 이론 내용을 JAVA로 풀이
 - Array (배열)
 - Linked List (연결리스트)
+- Stack (스택)
+- Queue (큐)
 
 ### Array (배열)
 1. 1차원 배열 : access, search, insertion, deletion
