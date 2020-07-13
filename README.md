@@ -6,6 +6,7 @@
 - Linked List (연결리스트)
 - Stack (스택)
 - Queue (큐)
+- Tree (트리)
 
 ### Array (배열)
 1. 1차원 배열 : access, search, insertion, deletion
@@ -16,6 +17,9 @@
 2. LinkedList : Collection Framework
 3. ArrayList Implement : 배열을 이용한 Array List 구현해보기
 4. LinkedList Implement : LinkedList 직접 구현해보기 
+
+### Tree (트리)
+1. Binary Search Tree (BTS) : 이진검색트리 구현해보기 
 
 ## java-algorithm-theory 
 알고리즘의 기본 이론내용을 JAVA로 풀이
