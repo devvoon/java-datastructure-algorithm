@@ -9,11 +9,11 @@ import java.util.LinkedList;
  *
  */
 public class LinkedListExample {
-	
-	public static void main(String[] args) {
+    
+    public static void main(String[] args) {
 
         // Creating object of the class linked list 
-        LinkedList<String> ll = new LinkedList<String>(); 
+        LinkedList<String> ll = new LinkedList<String>();
   
         // Adding elements to the linked list 
         System.out.println("===== insertion : linkedList.add(element) =====");
@@ -59,17 +59,15 @@ public class LinkedListExample {
         
         System.out.println("===== 순차적으로 읽기 - for =====");
         for (int i = 0; i < ll.size(); i++) {
-        	System.out.print(ll.get(i) + " ");
-		}
+            System.out.print(ll.get(i) + " ");
+        }
         
         System.out.println();
         System.out.println("===== 순차적으로 읽기 - Iterator =====");
         Iterator<String> it = ll.iterator();
         while(it.hasNext()) {
-        	String values = it.next();
-        	System.out.println(values + " ");
+            String values = it.next();
+            System.out.println(values + " ");
         }
-
-	}
-
+    }
 }
