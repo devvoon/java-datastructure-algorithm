@@ -6,20 +6,37 @@
 - Linked List (연결리스트)
 - Stack (스택)
 - Queue (큐)
-- Tree (트리)
+- Tree (트리) 
+- Graph (그래프) 
+- Sort (정렬) 
+
 
 ### Array (배열)
 1. 1차원 배열 : access, search, insertion, deletion
 2. 다차원 배열 : access, search, insertion, deletion
+
  
 ### LinkedList (연결리스트)
 1. ArrayList : Collection Framework
 2. LinkedList : Collection Framework
-3. ArrayList Implement : 배열을 이용한 Array List 구현해보기
-4. LinkedList Implement : LinkedList 직접 구현해보기 
+3. ArrayList Implement : 배열을 이용한 Array List 구현
+4. LinkedList Implement : LinkedList 구현
+
 
 ### Tree (트리)
-1. Binary Search Tree (BTS) : 이진검색트리 구현해보기 
+1. Binary Search Tree (BTS) : 이진검색트리 구현
+
+
+### Graph (그래프) 
+1. BFS (Breath First Search, 너비우선 탐색)  : Queue를 이용하여 구현 
+2. DFS (Depth First Search, 깊이우선 탐색) : Stack을 이용하여 구현
+
+
+### Sort (정렬)
+1. Selection Sort (선택정렬) 구현 
+2. Bubble Sort (버블정렬) 구현
+
+
 
 ## java-algorithm-theory 
 알고리즘의 기본 이론내용을 JAVA로 풀이
