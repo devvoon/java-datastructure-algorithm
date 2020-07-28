@@ -37,6 +37,7 @@
 2. Bubble Sort (버블 정렬) 구현
 3. Insert Sort (선택 정렬) 구현
 4. Shell Sort (쉘 정렬) 구현 
+5. Quick Sort (퀵 정렬) 구현
 
 
 ## java-algorithm-theory 
