@@ -3,12 +3,11 @@ package recursion;
 public class GCD {
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
 
-    	int p = 35;
-    	int q = 125;
+        int p = 35;
+        int q = 125;
         System.out.println("p : "  + p + " q : " + q);
-    	
+        
         /* 최대공약수 구하기 */
         //recursion
         System.out.println("=====recusrion으로 최대공약수 구하기1=====");
@@ -20,16 +19,16 @@ public class GCD {
         System.out.println("GCD : " + iGcdRecrusion2);
         
         System.out.println("=====recusrion으로 최소공배수 구하기=====");
-    	int ilcmRecursion = lcmRecursion(p,q);
-    	System.out.println("LCD : " + ilcmRecursion);
-    	
-    	System.out.println("=====while 문으로 최대공약수 구하기=====");
+        int ilcmRecursion = lcmRecursion(p,q);
+        System.out.println("LCD : " + ilcmRecursion);
+        
+        System.out.println("=====while 문으로 최대공약수 구하기=====");
         int iGcdFor = gcdWhile(p,q);
         System.out.println("GCD : " + iGcdFor);
-    	
+        
     }
 
-	/**
+    /**
      * 최대 공약수 구하기 Recursion
      * @param m
      * @param n
@@ -78,7 +77,6 @@ public class GCD {
         return (p*q)/gcdRecursion(p,q);
     }
     
-    
     /**
      * 최대 공약수 구하기 while
      * @param p
@@ -86,17 +84,17 @@ public class GCD {
      * @return
      */
     public static int gcdWhile(int p, int q) {
-		int temp=0;
+        int temp=0;
         prints(p,q);
-		while( p != q ) {
-			if( p > q ) {
-				p = p-q ;
-			}else if( q > p ) {
-				q = q-p;
-			}
-		}
-		return p;	
-	}
+        while( p != q ) {
+            if( p > q ) {
+                p = p-q ;
+            }else if( q > p ) {
+                q = q-p;
+            }
+        }
+        return p;
+    }
 
     /**
      * 계산하는 과정 출력
