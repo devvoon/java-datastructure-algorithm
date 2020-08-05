@@ -22,7 +22,7 @@ public class Sum {
         System.out.println("=====for을 이용한 1~n까지의 합 구하기=====");
         int sumOfFor = functionFor(n);
         System.out.println( );
-        System.out.println("sum of 1 ~ n  : " + sumOfFor);        
+        System.out.println("sum of 1 ~ n  : " + sumOfFor);
     }
     
     /**

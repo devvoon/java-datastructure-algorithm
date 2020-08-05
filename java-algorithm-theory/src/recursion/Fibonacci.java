@@ -18,7 +18,7 @@ public class Fibonacci {
         System.out.println( );
         
         // for
-        System.out.println("=====recusrion을 fibonacci수 구하기=====");
+        System.out.println("=====for을 fibonacci수 구하기=====");
         for (int i = 0; i < n; i++) {
             int fibonacciOfFor = fibonacciFor(i);
             System.out.print(fibonacciOfFor + " ");
@@ -40,7 +40,7 @@ public class Fibonacci {
     }
     
     /**
-     * recusrion을 fibonacci수 구하기
+     * for문을 fibonacci수 구하기
      * @param n
      * @return
      */
