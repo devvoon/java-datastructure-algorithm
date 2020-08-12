@@ -8,7 +8,6 @@
 - Queue (큐)
 - Tree (트리) 
 - Graph (그래프) 
-- Sort (정렬) 
 
 
 ### Array (배열)
@@ -32,21 +31,29 @@
 2. DFS (Depth First Search, 깊이우선 탐색) : Stack을 이용하여 구현
 
 
-### Sort (정렬)
-1. Selection Sort (선택 정렬) 구현 
-2. Bubble Sort (버블 정렬) 구현
-3. Insert Sort (선택 정렬) 구현
-4. Shell Sort (쉘 정렬) 구현 
-5. Quick Sort (퀵 정렬) 구현
-
 
 ## java-algorithm-theory 
 알고리즘의 기본 이론내용을 JAVA로 풀이
-- Recursion (순환) 
+- Recursion (순환)
+- Search (검색)
+- Sort (정렬) 
 
 ### Recursion (순환)  
 1.  Sum : 1 ~ n 까지의 합 구하기 (Recrusion, for)
 2.  Factorial : n! 구하기 (Recrusion, for)
 3.  Fibonacci 구하기 (Recrusion, for)
 
+
+### Sort (정렬)
+1. Selection Sort (선택 정렬) 구현 
+2. Bubble Sort (버블 정렬) 구현
+3. Insert Sort (선택 정렬) 구현
+4. Shell Sort (쉘 정렬) 구현 
+5. Quick Sort (퀵 정렬) 구현
+6. Radix Sort (기수 정렬) 구현
+
+
+### Search (검색)
+1. LinearSearch (선형 검색) 구현
+2. BinarySearch (이진 검색) 구현
 
