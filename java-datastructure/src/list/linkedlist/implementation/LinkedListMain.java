@@ -51,6 +51,8 @@ public class LinkedListMain {
         
         System.out.println("=====Iteration : clasee 생성 =====");
         System.out.println("=====next() =====");
+        //numbers의 listIterator을 호출하면  ListIterator 클래스가 인스턴스화 되어서 호출되어 객체가 되고 
+        // 타입은 LinkedList내에 ListIterator클래스 가 되어짐
         LinkedList.ListIterator i = numbers.listIterator();
         
         System.out.println(i.next());
