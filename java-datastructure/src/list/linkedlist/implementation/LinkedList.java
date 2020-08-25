@@ -250,23 +250,40 @@ public class LinkedList {
         
         /**
          *ListIterator가 생성되었을때 초기화 
+         * next는 head를 가리키고 있음
          */
         ListIterator(){
             next = head;
         }
         
+        /**
+         * next가 가르키는 값 구하고 next는 증가시키기
+         * @return
+         */
         public Object next() {
+            //next에 담겨있는 노드를 lastReturned에 담고
             lastReturned = next;
+            
+            //next는 next의 next를 담고 
             next = next.next;
+            
+            //index 증가
             nextIndex++;
             return lastReturned; 
         }
 
+        /**
+         * nextIndex가 존재하면 true , 존재하지않으면 false
+         * @return
+         */
         public boolean hasNext() {
-            
             return nextIndex < size();
         }
         
+        /**
+         * nextIndex 자리에 새로운 노드 삽입
+         * @param input
+         */
         public void add(Object input) {
             Node newNode = new Node(input);
             
@@ -283,6 +300,9 @@ public class LinkedList {
             size++;
         }
 
+        /**
+         * nextIndex-1 위치에 노드 삭제
+         */
         public void remove() {
 
             if(nextIndex == 0) {
