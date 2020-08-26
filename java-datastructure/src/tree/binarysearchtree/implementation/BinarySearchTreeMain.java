@@ -41,8 +41,10 @@ public class BinarySearchTreeMain {
         //search
         System.out.println();
         System.out.println("Search element :");
-        System.out.println(bst.searchRecursion(bst.root, 10));
-        System.out.println(bst.search(bst.root, 80));
+        bst.searchRecursion(bst.root, 10);
+        bst.searchRecursion(bst.root, 15);
+        bst.search(bst.root, 80);
+        bst.search(bst.root, 85);
         
         //사이즈 구하기
         System.out.println();

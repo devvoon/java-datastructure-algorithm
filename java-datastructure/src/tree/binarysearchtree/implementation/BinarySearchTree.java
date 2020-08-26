@@ -1,5 +1,10 @@
 package tree.binarysearchtree.implementation;
 
+/**
+ * BST
+ * root는 미리 지정(Binary Search의 특징상)
+ * 한 Node당 data, left node, right node가 필요
+ */
 public class BinarySearchTree {
     
     public Node root;
@@ -32,7 +37,7 @@ public class BinarySearchTree {
      * 새로운 노드 추가
      * 1. 부모의 값보다 작은 원소는 왼쪽, 큰 원소는 오른쪽 하위 트리
      * 2. root node의 data와 비교를 시작해서 비교해서 내려감
-     * 3. node가 빌때까지 반복한 후 데이터 넣고 종료
+     * 3. node가 빌 때까지 반복한 후 데이터 넣고 종료
      * @param input
      */
     public void add(int input) {
@@ -89,7 +94,7 @@ public class BinarySearchTree {
      * @return
      */
     public Node minNode(Node root) {
-        //루트의 오른쪽 노드가 null이 아닐 때까지 순환
+        //루트의 왼쪽 노드가 null이 아닐 때까지 순환
         if ( null != root.left ) {
             return minNode(root.left);
         }else {
@@ -99,6 +104,10 @@ public class BinarySearchTree {
     
     /**
      * 노드 삭제
+     * 1. 삭제 대상 노드의 child node 가 없는 경우 : 바로 삭제. parent node null 처리  
+     * 2. 삭제 대상 노드의 right child node만 있는 경우 : right child node를  삭제될 위치로 올려주기(parent node.right가 가르키도록)
+     * 3. 삭제 대상 노드의 left child node만 있는 경우 : left child node 를 삭제될 위치 올려주기(parent node.left에 넣어주기)
+     * 4. 삭제 대상 노드의 right, left child node 모두 있는 경우 : right child node가 큰 쪽 이므로, right child node들 중 에 제일 작은 node 를 삭제될 위치로 올려주기(parent node.right가 가르키도록)
      * @param node
      * @param input
      * @return
@@ -220,7 +229,6 @@ public class BinarySearchTree {
     
     /**
      * 반복문을 통한 search
-     * 없는 값 찾을 경우 예외처리 필요
      * @param node
      * @param input
      * @return
@@ -232,19 +240,34 @@ public class BinarySearchTree {
         }else {
             Node current  = node;
             
+            //current node의 left, right child가 모두 비었을 때까지 반복해서 찾기 (마지막 까지 반복)
             while(true){
-                //찾는 데이터보다 current 데이터의 값이 클 경우
+                //찾는 데이터보다 current 값이 클 경우
                 if (input < current.data) {
                     //left에 있는 자식 노드들을 탐색
                     current = current.left;
+                    
+                    //current가 null인 경우 탐색할 노드가 더이상 없다는 의미
+                    if ( null == current) {
+                        System.out.println("not found : " + input );
+                        return false; 
+                    }
                 
                 //찾는 데이터보다 current 데이터가 작을 경우
                 }else if (input > current.data) {
                     //right에 있는 자식 노드들을 탐색
                     current = current.right;
+                    
+                    //current가 null인 경우 탐색할 노드가 더이상 없다는 의미
+                    if ( null == current) {
+                        System.out.println("not found : " + input );
+                        return false; 
+                    }
+                    
+                //찾는 데이터와 current 노드의 데이터가 같을 경우 
                 }else if (input == current.data) {
-                   //찾는 데이터와 current 노드의 데이터가 같을 경우 출력하면서 종료
-                    System.out.println("searched using while: " + current.data);
+                    //출력하면서 종료
+                    System.out.println("finding using while: " + current.data);
                     return true;
                 } 
             }
@@ -252,8 +275,7 @@ public class BinarySearchTree {
     }
     
     /**
-     * recursion을 이용한 search 
-     * 없는 값 찾을 경우 예외처리 필요
+     * recursion을 이용한 search
      * @param node
      * @param input
      * @return
@@ -266,12 +288,26 @@ public class BinarySearchTree {
             Node current  = node;
             if (input < current.data) {
                 current = current.left;
-                return searchRecursion(current, input);
+                
+                if (null == current) {
+                    System.out.println("not found : " + input);
+                    return false;
+                }else {
+                    return searchRecursion(current, input);
+                }
+                
             }else if (input > current.data) {
                 current = current.right;
-                return searchRecursion(current, input);
+                
+                if ( null == current) {
+                    System.out.println( "not found : " + input);
+                    return false;
+                }else {
+                    return searchRecursion(current, input);
+                }
+                
             }else if (input == current.data) {
-                System.out.println("searched using recursion: " + current.data);
+                System.out.println("finding using recursion: " + current.data);
                 return true;
             } 
         }
