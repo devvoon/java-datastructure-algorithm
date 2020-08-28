@@ -10,7 +10,8 @@ public class HeapSortMain {
     public static void main(String[] args) {
         System.out.println("[ * Heap Sort * ]");
         
-        //배열임의로 생성 
+        //힙은 배열로 구성
+        //배열임의로 생성 (insert 하는 것도 만들면 좋음)
         int[] arr = new int[]{9,5,6,4,7,2,1,8,3};
         
         // 정렬 전 배열 출력 
@@ -34,7 +35,8 @@ public class HeapSortMain {
         int n = arr.length;
         
         // [build heap] 요소들을 heapify 해주기
-        // i = tree의 level이 됨 (i= 3 ~ 0 까지)
+        // i = tree의 level이 됨 (i= 3 ~ 0 까지) 
+        // 맨아래 level 부터 위로 올라옴 > bottom up 방식
         for (int i = n/2-1; i>=0; i--) {
             heapify(arr, n, i);
         }
