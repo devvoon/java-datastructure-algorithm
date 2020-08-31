@@ -32,6 +32,7 @@ public class SelectionSort {
                     elementData[j] = temp;
                 }
             }
+             System.out.println(toString());
         }
     }
     

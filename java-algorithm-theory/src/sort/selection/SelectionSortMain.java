@@ -21,13 +21,8 @@ public class SelectionSortMain {
         System.out.println(selection.toString());
         
         // 정렬 
+        System.out.println("- sorting ----------");
         selection.sort();
-        
-        // 정렬 후 배열 출력 결과 확인
-        System.out.println("- after selection sort ----------");
-        System.out.println(selection.toString());
-        
-        
     }
 
 }
