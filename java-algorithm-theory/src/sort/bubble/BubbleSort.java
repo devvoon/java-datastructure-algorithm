@@ -14,19 +14,34 @@ public class BubbleSort {
         // elementData = arrInput ; 
     }
     
+    /**
+     * sort
+     */
     public void sort() {
         int size  = elementData.length;
         
-        for (int i = 0; i < size; i++) {
+        //swap 했는지 체크
+        boolean swaped ;
+        for (int i = 0; i < size-1; i++) {
+            
+            swaped = false;
             for (int j = 0; j < size-i-1 ; j++) {
+
                 //인덱스값이 1만큼 큰 값과 비교하여 작은 값을 만났을 경우
                 if(elementData[j] > elementData[j+1]) {
                     //swap  
                     int temp = elementData[j];
                     elementData[j] = elementData[j+1];
                     elementData[j+1] = temp;
+                    swaped = true;
                 }
             }
+            
+            //swap이 한번도 되지 않았다면 정렬되었음으로 break
+            if (swaped==false) {
+                break;
+            }
+            System.out.println(toString());
         }
     }
     

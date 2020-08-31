@@ -17,11 +17,8 @@ public class BubbleSortMain {
         System.out.println("- before bubble sort ----------");
         System.out.println(bubble.toString());
         
-        // 정렬 
+        // 정렬
+        System.out.println("- sorting ----------");
         bubble.sort();
-        
-        // 정렬 후 배열 출력 결과 확인
-        System.out.println("- after bubble sort -----------");
-        System.out.println(bubble.toString());
     }
 }
