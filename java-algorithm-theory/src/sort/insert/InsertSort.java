@@ -13,14 +13,46 @@ public class InsertSort {
         // elementData = arrInput ; 
     }
     
-    public void sort(){
+    /**
+     * for문을 이용한 sort
+     */
+    public void sortFor(){
+        int size = elementData.length;
+       
+        for (int i = 1 ; i < size ; i++) {
+            int key = elementData[i];
+            int j;
+            
+            //반복문을 중첩 for로 했을 경우
+            for (j = i-1; j >= 0 ; j--) {
+                //key 보다 큰 값을 만나면 
+                if ( elementData[j] > key) {
+                    //해당 위치+1 에 큰 값을 대입 shift
+                    elementData[j+1] = elementData[j];
+                } else {
+                   //정렬되어있기 때문에 key 보다 작은 값을 만날 경우 바로 반복문 빠져 나옴
+                   //작은값 위치 j 가지고 있음
+                    break;
+                }
+            }
+            //key값을 작은값 보다 +1 위치에 넣어줌
+            elementData[j+1] = key;
+            System.out.println(toString());
+        }
+    }
+    
+    /**
+     *while문을 이용한 sort 
+     */
+    public void sortWhile(){
         int size = elementData.length;
         
-        for (int i = 0; i < size; i++) {
+        //반복문을 while로 했을 경우 
+        for (int i = 1; i < size; i++) {
             int key = elementData[i];
             int j = i-1;
             
-            //이미 정렬되어있는 i~1 부터 0 까지 의 값 중에서 i번째의 key 보다 큰 값을 만나면 
+            //이미 정렬되어있는 i~1 부터 0 까지 의 값 중에서 i번째의 key 보다 큰 값을 만나면
             while(j >= 0 && elementData[j] > key) {
                 //해당 위치에 큰 값을 대입 
                 elementData[j+1] = elementData[j];
@@ -30,6 +62,7 @@ public class InsertSort {
            //큰 값이 더이상 나오지 않고 while문이 종료되면 
            //key값을 [j+1] 위치에 넣어줌 
             elementData[j+1] = key; 
+            System.out.println(toString());
         }
     }
     
@@ -46,6 +79,5 @@ public class InsertSort {
             }
         }
         return str+ "]";
-
     }
 }

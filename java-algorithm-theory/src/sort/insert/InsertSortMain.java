@@ -11,19 +11,23 @@ public class InsertSortMain {
         int[] numbers = new int[]{9,5,6,4,7,2,1,8,3};
         
         //BubbleSort 인스턴스화 
-        InsertSort insert = new InsertSort(numbers);
+        InsertSort insertFor = new InsertSort(numbers);
+        InsertSort insertWhile = new InsertSort(numbers);
         
         // 정렬 전 배열 출력 
-        System.out.println("- before insert sort ----------");
-        System.out.println(insert.toString());
+        System.out.println("- ** before insert sort using for  ----------");
+        System.out.println(insertFor.toString());
         
-        // 정렬 
-        insert.sort();
+        // 정렬
+        System.out.println("- sorting ----------");
+        insertFor.sortFor();
         
-        // 정렬 후 배열 출력 결과 확인
-        System.out.println("- after insert sort -----------");
-        System.out.println(insert.toString());
-
+        // 정렬 전 배열 출력 
+        System.out.println("- ** before insert sort using while ----------");
+        System.out.println(insertWhile.toString());
+        
+        System.out.println("- sorting ----------");
+        insertWhile.sortWhile();
     }
 
 }
