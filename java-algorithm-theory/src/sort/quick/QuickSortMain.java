@@ -19,11 +19,9 @@ public class QuickSortMain {
         System.out.println(toString(arr));
         
         // 정렬 
+        System.out.println("- sorting ----------");
+
         sort(arr, 0, size);
-        
-        // 정렬 후 배열 출력 결과 확인
-        System.out.println("- after quick sort ----------");
-        System.out.println(toString(arr));
     }
     
     /**
@@ -39,7 +37,7 @@ public class QuickSortMain {
         //int pivot = arr[end];
         int left = start;
         int right = end ;
-        
+        System.out.println(toString(arr));
         // pivot값을 가운데 값으로 셋팅
         int pivot = arr[(left+right)/2];
         while( left <= right) {
