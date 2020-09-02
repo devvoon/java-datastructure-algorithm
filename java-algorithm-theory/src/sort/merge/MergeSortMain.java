@@ -11,14 +11,16 @@ public class MergeSortMain {
        System.out.println("[ * Merge Sort * ]");
         
         //배열임의로 생성 
-        int[] arr = new int[]{9,5,6,4,7,2,1,8,3};
+        //int[] arr = new int[]{9,5,6,4,7,2,1,8,3};
+        int[] arr = new int[]{38,27,43,3,9,82,10};
         
         // 정렬 전 배열 출력 
         System.out.println("- before merge sort ----------");
         System.out.println(toString(arr));
         
-        // 정렬 
-        sort(arr, 0, arr.length-1);
+        // 정렬
+        System.out.println("- sorting ----------");
+        split(arr, 0, arr.length-1);
         
         // 정렬 후 배열 출력 결과 확인
         System.out.println("- after merge sort ----------");
@@ -26,29 +28,31 @@ public class MergeSortMain {
     }
 
     /**
-     * 정렬 
+     * 분할 
      * @param arr
      * @param left
      * @param right
      */
-    public static void sort(int[] arr, int left, int right) {
+    public static void split(int[] arr, int left, int right) {
         if (left < right) {
             //(분할) 중앙요소 위치 찾기 
             int mid = (left + right) /2;
             
-            //(정렬) 앞 부분 : left (0) ~ mid / 뒷 부분 : mid+1 ~ right (n) 까지  
-            sort(arr, left, mid);  
-            sort(arr, mid+1 , right); 
+            //(분할) 앞 부분 : left (0) ~ mid / 뒷 부분 : mid+1 ~ right (n) 까지  
+            split(arr, left, mid);  
+            split(arr, mid+1 , right); 
             
             //(병합)
+            System.out.print(left + " " + mid + " " + right  + ": ");
             merge(arr, left, mid, right);
+            System.out.println("        " + toString(arr));
         }
     }
     
     /**
      * 병합
-     * 첫번째 서브array array[left..mid]
-     * 두번째 서브array array[mid+1..right]
+     * 첫번째 sub array array[left..mid]
+     * 두번째 sub array array[mid+1..right]
      * @param arr
      * @param left
      * @param mid
@@ -68,11 +72,14 @@ public class MergeSortMain {
         // 임시 배열값 복사
         for (int i = 0; i < n1; i++) {
             L[i]  = arr[left + i];
+
         }
         
         for (int j = 0; j < n2; j++) {
             R[j] = arr[mid + 1 + j];
         }
+        
+        System.out.print(toString(L) + " " + toString(R) + " -->  ");
         
         //merge
         //초기 인덱스
