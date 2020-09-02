@@ -43,14 +43,15 @@ public class BinarySearch {
      }
 
     public static int binarySearch(int[] arr, int x) {
-        int left = 0;
-        int right = arr.length -1;
+        int begin = 0;
+        int end = arr.length -1;
         
+
         //왼쪽위치가 오른쪽 위치보다 커질때까지 반복
-        while (left <= right) {
+        while (begin <= end) {
             //중간요소 위치 계산
-            int mid = left + (right-left)/2; 
-            
+            int mid =( begin + end ) /2 ;
+            System.out.print( mid + " ");
             // 중간 요소와 일치하면 중간 인덱스를 반환
             if(arr[mid] == x) {
                 return mid;
@@ -60,13 +61,13 @@ public class BinarySearch {
             if(arr[mid] < x) {
                 // 중간 요소 다음의 오른쪽 절반 하위 배열에만 놓고, 오른쪽 절반을 반복
                 // 왼쪽 위치 재조정 
-                left = mid + 1;
+                begin = mid + 1;
             
             // x가 중간 요소 보다 작은 경우
             }else {
                 // 왼쪽 절반 하위 배열만 놓고, 왼쪽 절반에 반복
                 // 오른쪽 위치 재조정
-                right = mid - 1;
+                begin = mid - 1;
             }
         }
         //찾을수 없을 경우 -1 반환
@@ -75,25 +76,38 @@ public class BinarySearch {
 
     /**
      * recursion을 이용한 binarySearchRecursion
-     * @param items
-     * @param target
+     * @param arr
+     * @param x
      * @param begin
      * @param end
      * @return
      */
-    public static int binarySearchRecursion(int[] items, int target, int begin, int end){
+    public static int binarySearchRecursion(int[] arr, int x, int begin, int end){
         if(begin > end){
             return -1;
         }else {
-            int middle = (begin+end)/2;
-            int compResult = Integer.toString(target).compareTo(Integer.toString(items[middle]));
+            int mid = (begin+end)/2;
+            //int compResult = Integer.toString(target).compareTo(Integer.toString(arr[middle]));
             
-            if (compResult == 0){
-                return middle;
-            } else if (compResult<0){
-                return binarySearchRecursion(items, target, begin, middle-1);
+            //if (compResult == 0){
+            //    return mid;
+            //} else if (compResult<0){
+            //    return binarySearchRecursion(arr, x, begin, mid-1);
+            //} else {
+            //    return binarySearchRecursion(arr, x, mid+1, end);
+            //}
+            
+            System.out.print( mid + " ");
+            if ( x == arr[mid] ) {
+               // 찾았을 경우 index 출력 
+                return mid;
+            } else if (x < arr[mid] ){
+                // 찾는 값이 middle 값보다 작을 경우
+                return binarySearchRecursion(arr, x, begin, mid-1);
             } else {
-                return binarySearchRecursion(items, target, middle+1, end);
+                //target > arr[middle]
+                // 찾는 값이 middle 값보다 클 경우
+                return binarySearchRecursion(arr, x, mid+1, end);
             }
         }
     }
