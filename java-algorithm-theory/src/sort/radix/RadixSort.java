@@ -20,6 +20,7 @@ public class RadixSort {
         System.out.println(toString(arr));
         
         // 정렬 
+        System.out.println("- sorting ----------");
         radixSort(arr, arr.length);
         
         // 정렬 후 배열 출력 결과 확인
@@ -39,6 +40,7 @@ public class RadixSort {
         //exp = 10^i (1의자리 , 10의자리, 100의자리...)
         for (int exp = 1; max/exp > 0 ; exp *= 10) {
             countSort(arr, n , exp);
+            System.out.println(toString(arr));
         }
     }
 
