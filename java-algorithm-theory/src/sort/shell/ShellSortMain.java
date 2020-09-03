@@ -22,6 +22,7 @@ public class ShellSortMain {
         System.out.println(shell.toString());
         
         // 정렬 
+        System.out.println("- sorting ----------");
         shell.sort();
         
         // 정렬 후 배열 출력 결과 확인

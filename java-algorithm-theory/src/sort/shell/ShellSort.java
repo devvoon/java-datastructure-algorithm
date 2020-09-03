@@ -32,6 +32,7 @@ public class ShellSort {
                 //temp에 넣어둔 값 넣어주기 
                 elementData[j] = temp;
              }
+             System.out.println(toString());
         }
     }
     
