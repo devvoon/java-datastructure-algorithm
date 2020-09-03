@@ -1,21 +1,25 @@
-package graph.bfs.implementation;
+package graph.traversal;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Stack;
+import java.util.Queue;
 
-public class GraphDFS {
-
+/**
+ * BFS
+ *
+ */
+public class BFS {
+    
     private int Vertex;
     private LinkedList<Integer> adjacent[];
 
     //그래프 생성
-    GraphDFS(int vertex){
+    BFS(int vertex){
         Vertex = vertex;
         
-        //vertex 입력 크기만큼 linked list 사이즈 정의(힙 영역에 크기만큼 자리 확보 : null) 
+      //vertex 입력 크기만큼 linked list 사이즈 정의(힙 영역에 크기만큼 자리 확보 : null)
         adjacent = new LinkedList[vertex];
-
+        
         //vertex의 갯수 만큼 linked list 초기화 ()
         for (int i = 0; i < vertex; i++) {
             //adjacent 
@@ -23,34 +27,37 @@ public class GraphDFS {
         }
     }
     
-    //그래프에 edge 추가
+    //그래프에 edgd 추가
     void addEdge(int vertex, int input) {
         adjacent[vertex].add(input);
     }
     
-    //Stack 생성  
-    void DFS(int s) {
+    // linked list로 Queue를 구현 
+    void BFS(int s) {
+        
         boolean visited[] = new boolean[Vertex];
-        Stack<Integer> stack = new Stack<Integer>();
+        Queue<Integer> queue = new LinkedList<Integer>();
         
-        //vertex 입력 
         visited[s] =true;
-        stack.add(s);
+        queue.add(s);
         
-        //stack이 empty 가 아닐때까지 top을 pop하여 출력 
-        while(stack.size() !=0 ) {
-            s=stack.pop();
+        //queue가 empty가 아닐때까지 head를 poll 하여 출력
+        while(queue.size() !=0 ) {
+            //queue의 head를 출력
+            s=queue.poll();
             System.out.print(s + " ");
             
             Iterator<Integer> i = adjacent[s].listIterator();
             while(i.hasNext()) {
                 int n = i.next();
                 if (!visited[n]) {
-                   //방문여부 체크후 stack에 add 
+                    // 방문여부 체크후 queue에 add 
                     visited[n]= true;
-                    stack.add(n);
+                    queue.add(n);
                 }
             }
         }
     }
+    
+    
 }
