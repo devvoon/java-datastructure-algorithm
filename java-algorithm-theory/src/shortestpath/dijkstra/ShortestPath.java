@@ -17,7 +17,6 @@ public class ShortestPath {
                                       { 0,  0,  0,  0,  0,  2,  0,  1,  6 },
                                       { 8, 11,  0,  0,  0,  0,  1,  0,  7 },
                                       { 0,  0,  2,  0,  0,  0,  6,  7,  0 } };
-                                      
          
         ShortestPath ShortestPath = new ShortestPath();
         ShortestPath.dijsktra(graph,0);
@@ -44,6 +43,9 @@ public class ShortestPath {
             //최단경로 구하지않았으니 false
             sptSet[i] = false;
         }
+        
+        System.out.println(" 초기화된 배열");
+        
         toString(distance);
         System.out.println();
         // source 정점에서 자기자신까지의 거리는 언제나 0
@@ -55,16 +57,17 @@ public class ShortestPath {
             //distance배열에서 최단경로를 못찾은 정점을 index를 찾아 u에 저장
             int u = minDistance(distance, sptSet);
             System.out.println( count + ".  " + u + " 까지의 최단경로 찾기");
-            //선택된 점정에서 최단경로를 찾을 것이기 때문에 자기자신은 true로 변경해두어야함 
+            //선택된 점정u에서 최단경로를 찾을 것이기 때문에 자기자신은 true로 변경해두어야함 
             sptSet[u] = true;
 
+            //정점 u에서 v까지 가는 최단거리 계산 로직
             for (int v = 0; v < V; v++) {
 
                 System.out.println( " ." + v + " : " + sptSet[v]  +  "   " + graph[u][v] + " +  " + distance[u] + " < " + distance[v] );
                 
                 // 1. !sptSet[v] ; false = 최단경로 아직 못찾은 vertex 
                 // 2. graph[u][v] != 0 ; u에서 v까지의 엣지가 있어야함 ( 거리가 0 아니여야함 )
-                // 3. 최단경로를 찾으려는 정점이 현재 경로가 infinite 가 아니여아 함
+                // 3. 최단경로를 찾으려는 정점이 현재 경로가 infinite 가 아니여아 함 (값이 있어야함)
                 // 4. (((distance[u] + graph[u][v]) < distance[v])) ; src에서 v에서 u까지의 총 경로 가중치  < distance [v]의 현재 값보다 작아야 함
                 if (!sptSet[v] && (graph[u][v] != 0) &&  (distance[u] != Integer.MAX_VALUE)  && (((distance[u] + graph[u][v]) < distance[v]))) {
                     //결과값에 최단경로 update 해주기 
