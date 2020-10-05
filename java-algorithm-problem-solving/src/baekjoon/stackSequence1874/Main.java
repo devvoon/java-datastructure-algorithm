@@ -23,6 +23,7 @@ package baekjoon.stackSequence1874;
  * push연산은 +로, pop 연산은 -로 표현하도록 한다. 불가능한 경우 NO를 출력한다.
  * 
  * 
+ * 
  * @reference https://www.acmicpc.net/problem/1874
  * @author iamdawoonjeong
  */
