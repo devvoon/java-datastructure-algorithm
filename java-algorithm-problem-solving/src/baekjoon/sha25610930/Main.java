@@ -1,4 +1,4 @@
-package baekjoon.sha256;
+package baekjoon.sha25610930;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,19 +6,6 @@ import java.security.MessageDigest;
 
 /**
  * 10930 SHA-256 
- * 
- * [문제]
- * 문자열 S가 주어졌을 때, SHA-256 해시값을 구하는 프로그램을 작성하시오.
- * 
- * [입력]
- * 첫째 줄에 문자열 S가 주어진다. S는 알파벳 대문자와 소문자, 그리고 숫자로만 이루어져 있으며, 길이는 최대 50이다.
- * 
- * [출력]
- * 첫째 줄에 S의 SHA-256 해시값을 출력한다.
- * 
- * [예제]
- * Baekjoon
- * ->9944e1862efbb2a4e2486392dc6701896416b251eccdecb8332deb7f4cf2a857
  * 
  * @reference https://www.acmicpc.net/problem/10930
  * @author iamdawoonjeong
