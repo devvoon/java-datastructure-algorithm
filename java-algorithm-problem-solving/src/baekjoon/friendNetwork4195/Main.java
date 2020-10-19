@@ -11,10 +11,12 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 public class Main {
-    static Map<String, Integer> LIST = new HashMap<String, Integer>();
-    static int[] PARENT, RANK, RELATION ;
-    static int MAX = 100000;;
-
+    
+    static Map<String, Integer> LIST ;
+    static int[] PARENT, RANK, RELATION;
+    static int MAX = 100001;
+    
+    
     public static void main(String[] args) throws IOException {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
@@ -24,13 +26,13 @@ public class Main {
 
         int testCase = Integer.parseInt(br.readLine());
         
-        
         for (int i = 0; i < testCase; i++) {
             int F = Integer.parseInt(br.readLine());
             int index = 0;
             
-            LIST = new HashMap();
+            LIST = new HashMap<>();
             PARENT = new int[MAX];
+            RANK = new int[MAX];
             RELATION = new int[MAX];
             
             Arrays.fill(RELATION, 1);
@@ -40,21 +42,21 @@ public class Main {
                 String name1 = st.nextToken();
                 String name2 = st.nextToken();
                 
-                if (!LIST.containsValue(name1)){
+                if (!LIST.containsKey(name1)) {
                     LIST.put(name1, index);
-                    PARENT[index] = index++; 
+                    PARENT[index] = index++;
                 }
                 
-                if (!LIST.containsValue(name2)){
+                if(!LIST.containsKey(name2)) {
                     LIST.put(name2, index);
-                    PARENT[index] = index++; 
+                    PARENT[index] = index++;
                 }
                 
                 union(LIST.get(name1), LIST.get(name2));
+                
+                bw.write(RELATION[find(LIST.get(name1))] + "\n");
             }
-            
         }
-        
 
         bw.flush();
         bw.close();
@@ -64,22 +66,39 @@ public class Main {
         isr.close();
     }
 
-    private static void union(int u, int v) {
+
+    public static void union(int u, int v) {
         int uR = find(u);
         int vR = find(v);
-                
+        
         if (uR == vR) {
             return;
         }
-            
         
+        if(RANK[uR] > RANK[uR]) {
+            swap(uR, vR);
+        }
+        
+        PARENT[uR] = vR;
+        RELATION[vR] += RELATION[uR];
+        
+        if(RANK[uR] == RANK[vR]) {
+            RANK[vR]++;
+        }
     }
 
-    private static int find(int u) {
-        if (PARENT[u] == u) {
+    public static int find(int u) {
+        if (PARENT[u] == u ) {
             return u;
         }
         return (PARENT[u] = find(PARENT[u]));
-    }   
+    }
+    
+    public static void swap(int n1, int n2) {
+        int temp = n1;
+        n1 = n2;
+        n2 = temp;
+    }
 
+   
 }
