@@ -6,6 +6,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+/**
+ * 10989 수 정렬하기3
+ * 
+ * @author iamdawoonjeong
+ * @reference https://www.acmicpc.net/problem/10989
+ *
+ */
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -16,7 +23,7 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(osw);
         
         int N = Integer.parseInt(br.readLine());
-        int[] arr = new int[10001]; //문제의 1000이
+        int[] arr = new int[10001]; //문제의 10000까지의 자연수가 들어간다고 함
         
         for (int i = 0; i < N; i++) {
             int number = Integer.parseInt(br.readLine());

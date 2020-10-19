@@ -7,6 +7,13 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
 
+/**
+ * 10989 수 정렬하기3 - API이용
+ * 
+ * @author iamdawoonjeong
+ * @reference https://www.acmicpc.net/problem/10989
+ *
+ */
 public class MainAPI {
 
     public static void main(String[] args) throws IOException {
@@ -16,7 +23,6 @@ public class MainAPI {
         OutputStreamWriter osw = new OutputStreamWriter(System.out);
         BufferedWriter bw = new BufferedWriter(osw);
 
-        
         int N = Integer.parseInt(br.readLine());
         int[] arr = new int[N];
         
