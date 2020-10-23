@@ -41,6 +41,11 @@ public class Main {
 
     }
 
+    /**
+     * 버블 정렬 구현 (bubble sort)
+     * @param numbers
+     * @return
+     */
     private static int[] solution(int[] numbers) {
 
         boolean swaped = false;

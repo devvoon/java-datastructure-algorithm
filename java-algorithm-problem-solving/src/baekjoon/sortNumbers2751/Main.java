@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
- * 2751 수 정렬하기 2 (병합정렬이용)
+ * 2751 수 정렬하기 2 (병합정렬 merge sort이용)
  * 
  * @references https://www.acmicpc.net/problem/2751
  * @author iamdawoonjeong
@@ -29,6 +29,7 @@ public class Main {
         }
         
         sort(arr, 0, arr.length-1);
+        
         for (int i : arr) {
             bw.write(i+"\n");
         }
@@ -42,6 +43,12 @@ public class Main {
 
     }
 
+    /**
+     * 정렬
+     * @param arr
+     * @param left
+     * @param right
+     */
     private static void sort(int[] arr, int left, int right) {
     
         if (left < right) {
@@ -53,6 +60,13 @@ public class Main {
         }
     }
 
+    /**
+     * 병합
+     * @param arr
+     * @param left
+     * @param mid
+     * @param right
+     */
     private static void merge(int[] arr, int left, int mid, int right) {
         int sizeLeft = mid-left+1;
         int sizeRight = right-mid;
