@@ -6,6 +6,12 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * 11004 K번째 수  - Arrays.sort()로 구하기
+ * 
+ * @reference https://www.acmicpc.net/problem/11004
+ * @author iamdawoonjeong
+ */
 public class MainSort {
 
     public static void main(String[] args) {

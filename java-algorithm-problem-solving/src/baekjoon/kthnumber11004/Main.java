@@ -5,6 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * 11004 K번째 수  - quick sort 구현
+ * 
+ * @reference https://www.acmicpc.net/problem/11004
+ * @author iamdawoonjeong
+ */
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -29,6 +35,13 @@ public class Main {
         System.out.println(result[k-1]);
     }
 
+    /**
+     * 퀵 정렬(quick sort)로 구하기
+     * @param arr
+     * @param start
+     * @param end
+     * @return
+     */
     private static int[] sort(int[] arr, int start, int end) {
         int left = start;
         int right = end;
