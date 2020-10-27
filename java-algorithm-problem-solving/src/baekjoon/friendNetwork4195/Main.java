@@ -75,7 +75,7 @@ public class Main {
             return;
         }
         
-        if(RANK[uR] > RANK[uR]) {
+        if(RANK[uR] > RANK[vR]) {
             swap(uR, vR);
         }
         
