@@ -5,8 +5,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/**
+ * 7490 0 만들기
+ * 
+ * @references https://www.acmicpc.net/problem/7490
+ * @author iamdawoonjeong
+ */
 public class Main {
 
+    //연산자를 담을 ArrayList 의 ArrayList
     static ArrayList<ArrayList<Character>> operator; 
     
     public static void main(String[] args) throws IOException {
@@ -79,7 +86,6 @@ public class Main {
         return cal;
     }
 
-
     /**
      * 연산자 조합의 모든 경우의 수를 구함
      * 완전탐색
@@ -89,19 +95,20 @@ public class Main {
     public static void recursive(ArrayList<Character> list, int n) {
         
         if(list.size() == n ) {
+            // 연산자 리스트가 n개가 되었을때 arraylist형태로 operator에 그대로 담음
             operator.add((ArrayList<Character>) list.clone());
             return;
         }
+
+        list.add(' ');              //[ ] 으로 시작 
+        recursive(list, n);         //[ ]에서 연산자들을 계속 붙임 
+        list.remove(list.size()-1); //list 중 마지막 꺼를 지우고
         
-        list.add(' ');
-        recursive(list, n);
+        list.add('+');              // + 붙이고 다시 재귀
+        recursive(list, n); 
         list.remove(list.size()-1);
-        
-        list.add('+');
-        recursive(list, n);
-        list.remove(list.size()-1);
-        
-        list.add('-');
+
+        list.add('-'); // [ , -] 
         recursive(list, n);
         list.remove(list.size()-1);
     
