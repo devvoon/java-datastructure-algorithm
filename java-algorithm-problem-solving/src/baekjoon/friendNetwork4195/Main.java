@@ -10,6 +10,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+/**
+ * 4195 친구네트워크
+ * 
+ * @references https://www.acmicpc.net/problem/4195
+ * @author iamdawoonjeong
+ */
 public class Main {
     
     static Map<String, Integer> LIST ;
