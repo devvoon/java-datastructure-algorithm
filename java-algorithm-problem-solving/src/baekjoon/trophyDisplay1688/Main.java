@@ -2,9 +2,13 @@ package baekjoon.trophyDisplay1688;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
 
+/**
+ * 1668 트로피 진열
+ * 
+ * @references https://www.acmicpc.net/problem/1668
+ * @author iamdawoonjeong
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -22,39 +26,33 @@ public class Main {
             br.close();
             isr.close();
 
-            int left = asending(arr);
+            int left = 1; //왼쪽에서보는 갯수 
+            int lastL = arr[0];
+            
+            for (int i = 1; i < arr.length; i++) {
+                if ( lastL < arr[i]) {
+                    lastL = arr[i];
+                    left++;
+                }
+            }
+            
             System.out.println(left);
             
-            Arrays.sort(arr, new Comparator<Integer>() {
-
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return Integer.compare(o2, o1);
+            int right = 1;  //오른쪽에서 보는 갯수
+            int lastR = arr[n-1];
+            
+            for (int j = n-2; j >= 0; j--) {
+                if ( lastR < arr[j]) {
+                    lastR = arr[j];
+                    right++;
                 }
-            });
-
-            int right = asending(arr);
+            }
+            
             System.out.println(right);
-
             
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private static int asending(Integer[] arr) {
-        
-        int count = 1;
-        int last = arr[0];
-        
-        for (int i = 1; i < arr.length; i++) {
-            if ( last < arr[i]) {
-                last = arr[i];
-                count++;
-            }
-        }
-        
-        return count;
     }
 
 }
