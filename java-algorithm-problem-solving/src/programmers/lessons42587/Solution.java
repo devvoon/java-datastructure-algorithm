@@ -1,4 +1,4 @@
-package programmers.lessons42586;
+package programmers.lessons42587;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
