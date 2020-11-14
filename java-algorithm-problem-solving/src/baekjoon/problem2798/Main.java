@@ -1,13 +1,13 @@
 package baekjoon.problem2798;
 
+import java.util.Scanner;
+
 /**
  * 2920  블랙잭
  * 
  * @reference https://www.acmicpc.net/problem/2798
  * @author iamdawoonjeong
  */
-import java.util.Scanner;
-
 public class Main {
     public static void main(String asgs[]) {
         
