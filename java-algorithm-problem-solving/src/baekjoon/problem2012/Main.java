@@ -5,6 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+/**
+ * 2012 등수 매기기
+ * 
+ * @reference https://www.acmicpc.net/problem/2012
+ * @author iamdawoonjeong
+ *
+ */
 public class Main {
 
     public static void main(String[] args) throws IOException {
