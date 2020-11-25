@@ -5,6 +5,12 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * 1472 소트인사이드 - Arrays.sort() 이용
+ * 
+ * @reference https://www.acmicpc.net/problem/1472
+ * @author iamdawoonjeong
+ */
 public class MainAPI2 {
 
     public static void main(String[] args) {
