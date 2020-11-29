@@ -28,6 +28,12 @@ public class Graph {
         }
     }
     
+    /**
+     * find  부모노드 찾기
+     * @param subsets
+     * @param i
+     * @return
+     */
     public int find(subset subsets[], int i) {
         if(subsets[i].parent != i) {
             subsets[i].parent = find(subsets, subsets[i].parent);
@@ -35,10 +41,18 @@ public class Graph {
         return subsets[i].parent;
     }
     
+    /**
+     * union
+     * @param subsets
+     * @param x
+     * @param y
+     */
     public void Union(subset subsets[], int x, int y) {
+        //각 부모노드를 찾음
         int xroot = find(subsets, x);
         int yroot = find(subsets, y);
         
+        // union - by - rank 기법
         if (subsets[xroot].rank < subsets[yroot].rank) {
             subsets[xroot].parent = yroot;
         }else if (subsets[xroot].rank > subsets[yroot].rank) {
@@ -50,6 +64,8 @@ public class Graph {
     }
     
     public void KruskalMST() {
+        
+        //초기화 : 각 요소를 집합을 만들어줌 
         Edge result[] = new Edge[V];
         int e = 0;
         int i = 0;
@@ -57,6 +73,7 @@ public class Graph {
             result[i] = new Edge();
         }
         
+        //가중치를 기준으로  정렬
         Arrays.sort(edge);
         
         subset subsets[] = new subset[V];
