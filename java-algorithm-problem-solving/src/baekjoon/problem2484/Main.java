@@ -3,7 +3,6 @@ package baekjoon.problem2484;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
@@ -37,7 +36,13 @@ public class Main {
             int temp = 0;
             
             for (int j = 1; j < 7; j++) {
-                //같은 눈이 4개가 나오면 50,000원+(같은 눈)*5,000원의 상금
+                
+                // 나온적 없는 수는 continue롤 넘김 
+                if (arr[j]  == 0 ) {
+                    continue;
+                }
+                
+               //같은 눈이 4개가 나오면 50,000원+(같은 눈)*5,000원의 상금
                 if ( arr[j] == 4 ) {
                     reward = 50000 + (j*5000);
                     break;
