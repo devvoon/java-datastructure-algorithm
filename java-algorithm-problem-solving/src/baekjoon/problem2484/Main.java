@@ -25,9 +25,7 @@ public class Main {
             st = new StringTokenizer(br.readLine()); //주사위를 던진 4개의 숫자 받기
 
             int[] arr = new int[7];
-            ArrayList<Integer> list = new ArrayList<Integer>();
 
-            
             Arrays.fill(arr, 0);
             for (int j = 0; j < 4; j++) {
                 arr[Integer.parseInt(st.nextToken())] += 1 ;
