@@ -5,13 +5,13 @@
 ### 구현 Implementation
 
 
-| Index | Problem                                                                       | Level | Category    | Time / Space Complexity                                                                                                                                   | Solution	| Source	|
+| Number | Problem                                                                       | Level | Category    | Time / Space Complexity                                                                                                                                   | Solution	| Source	|
 |:-----:|:----------------------------------------------------------------------------- |:------|:------------|:------|:------|:------|
 | 2920  | [음계](https://www.acmicpc.net/problem/2920)									| Ⅰ 	| Implementation 					| O(n)/O(n) 
 | [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-2920/)  |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem2920/Main.java)  |
 | 2798  | [블랙잭](https://www.acmicpc.net/problem/2798)									| Ⅰ 	| Implementation 					| O(n<sup>3</sup>)/O(n) 
 | [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-2798/)  |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem2798/Main.java)  |
-| 1874  | [스택수열](https://www.acmicpc.net/problem/1874)								| Ⅰ 	| Stack				 				| [O(nlogn)/O(n)] 
+| 1874  | [스택수열](https://www.acmicpc.net/problem/1874)								| Ⅰ 	| Stack				 				| O(nlogn)/O(n)
 | [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-1874/)  |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1874/Main.java)  |
 | 1966  | [프린터큐](https://www.acmicpc.net/problem/1966)								| Ⅰ 	| Queue 							| O(nlogn)/O(n) 
 | [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-1966/)  |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1966/Main.java)  |
