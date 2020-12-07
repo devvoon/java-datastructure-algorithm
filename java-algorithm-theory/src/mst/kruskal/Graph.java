@@ -1,4 +1,4 @@
-package mst.kruscal;
+package mst.kruskal;
 
 import java.util.Arrays;
 
