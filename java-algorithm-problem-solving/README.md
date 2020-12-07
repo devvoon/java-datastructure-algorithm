@@ -5,7 +5,7 @@
 ### 구현 Implementation
 
 | Index | Problem                                                                       | Level | Category    | Time / Space Complexity                                                                                                                                      | Solution	| Source	|
-| :---: | ----------------------------------------------------------------------------- | ----- | -------------------------- ------ | ------- | ---- |
+| :---: | :----------------------------------------------------------------------------- | :----- | :-------------------------- ------ | :------- | :---- |
 | 2920  | [음계](https://www.acmicpc.net/problem/2920)									| Ⅰ 	| Implementation 					| O(n)/O(n)
 | [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-2920/)  |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem2920/Main.java)  |
 | 2798  | [블랙잭](https://www.acmicpc.net/problem/2798)									| Ⅰ 	| Implementation 					| O(n<sup>3</sup>)/O(n) |
