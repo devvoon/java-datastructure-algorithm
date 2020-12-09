@@ -32,9 +32,8 @@
 
 ## 재귀 Recursion
 
-| Index | Problem                                                                      	  | Level | Category 					    | Time / Space Complexity 
-| Solution	| Source	|                                                                                                                                  
-|:-------|:------------------------------------------------------------------------------ |:------|:------------|:------|:------|:------|
+| Number | Problem                                                                       | Level | Category    						| Time / Space Complexity                                                                                                                | Solution	| Source	|
+|:-------|:----------------------------------------------------------------------------- |:------|:------------|:------|:------|:------|
 | 2747   | [피보나치 수](https://www.acmicpc.net/problem/2747)					  		  | Ⅰ 	  | Recursion, DP 				    | O(n)/O(n)				| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-2747/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem2747/Main.java)   |  
 | **1074**   | [Z](https://www.acmicpc.net/problem/1074)								  | Ⅱ    | Recursion 				      	| O(N)/O(N)				| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-1074/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1074/Main.java)  		  |
 | **7490**   | [0 만들기](https://www.acmicpc.net/problem/7490)							  | Ⅰ 	  | Recursion 				        | O(N)/O(N)              | [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-7490/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem7490/Main.java)  |
@@ -42,9 +41,8 @@
 
 ## 정렬 Sort
 
-| Index | Problem                                                                      	  | Level | Category 					       | Time / Space Complexity 
-| Solution	| Source	|                                                                                                                                  
-|:-------|:------------------------------------------------------------------------------ |:------|:------------|:------|:------|:------|
+| Number | Problem                                                                       | Level | Category    						| Time / Space Complexity                                                                                                                | Solution	| Source	|
+|:-------|:----------------------------------------------------------------------------- |:------|:------------|:------|:------|:------|
 | 2750   | [수 정렬하기](https://www.acmicpc.net/problem/2750)					  		  | Ⅰ 	  | Sort 							   | O(n)/O(n)				| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-2750/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem2750/Main.java)   |  
 | 1427   | [소트 인사이드](https://www.acmicpc.net/problem/1427)					  		  | Ⅰ 	  | Sort 							   | O(n)/O(n)				| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-1427/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1427/Main.java)   |  
 | 10814  | [나이순 정렬](https://www.acmicpc.net/problem/10814)					  		  | Ⅰ 	  | Sort 							   | O(n)/O(n)				| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-10814/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem10814/Main.java)   |  
