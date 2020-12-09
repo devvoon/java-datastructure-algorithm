@@ -30,7 +30,7 @@
 
 
 
-## 재귀 Recursion
+### 재귀 Recursion
 
 | Number | Problem                                                                       | Level | Category    						| Time / Space Complexity                                                                                                                | Solution	| Source	|
 |:-------|:----------------------------------------------------------------------------- |:------|:------------|:------|:------|:------|
@@ -39,7 +39,7 @@
 | **7490**   | [0 만들기](https://www.acmicpc.net/problem/7490)							  | Ⅰ 	  | Recursion 				        | O(N)/O(N)              | [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-7490/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem7490/Main.java)  |
 
 
-## 정렬 Sort
+### 정렬 Sort
 
 | Number | Problem                                                                       | Level | Category    						| Time / Space Complexity                                                                                                                | Solution	| Source	|
 |:-------|:----------------------------------------------------------------------------- |:------|:------------|:------|:------|:------|
