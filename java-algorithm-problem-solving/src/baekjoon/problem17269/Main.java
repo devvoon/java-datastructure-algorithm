@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 /**
- *  17269 궁합
+ *  17269 이름궁합 테스트 - HashMap사용
  * 
  * @author iamdawoonjeong
  * @reference https://www.acmicpc.net/problem/17269
