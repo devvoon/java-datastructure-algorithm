@@ -21,13 +21,14 @@ public class Main {
         int n= Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
         
-        int[] adjacent = new int[100001];
-        bfs(adjacent, n, k);
-        System.out.println(adjacent[k]);
+        //이전 정점에서 현재 정점까지의 거리를 계산
+        int[] arr = new int[100001];
+        bfs(arr, n, k);
+        System.out.println(arr[k]);
 
     }
     
-    public static void bfs(int[] adjacent, int start, int end) {
+    public static void bfs(int[] arr, int start, int end) {
         
         Queue<Integer> queue= new LinkedList<Integer>();
         queue.add(start);
@@ -38,19 +39,24 @@ public class Main {
                 break;
             }
         
-           if ( now > 0 && adjacent[now-1] == 0) {
+           // 수빈이가 이동할 수 있는 경우의 세가지를 매 노드 마다 체크 
+            
+           // x-1  이동 : 이동 노드 값이 0보다 크고, 방문한적이 없어야 함
+           if ( now > 0 && arr[now-1] == 0) {
                queue.add(now-1);
-               adjacent[now-1] = adjacent[now] + 1;
+               arr[now-1] = arr[now] + 1;
             }
            
-           if ( now < 100000 && adjacent[now+1] == 0) {
+           // x+1  이동 : 이동 노드 값이 최대값 미만, 방문한적이 없어야 함
+           if ( (now+1) < 100000 && arr[now+1] == 0) {
                queue.add(now+1);
-               adjacent[now+1] = adjacent[now] + 1;
+               arr[now+1] = arr[now] + 1;
             }
            
-           if ( now*2 <= 100000 && adjacent[now*2] == 0) {
+           // x*2  이동 : 이동 노드 값이 최대값 이하, 방문한적이 없어야 함
+           if ( now*2 <= 100000 && arr[now*2] == 0) {
                queue.add(now*2);
-               adjacent[now*2] = adjacent[now] + 1;
+               arr[now*2] = arr[now] + 1;
             }
         }
     }
