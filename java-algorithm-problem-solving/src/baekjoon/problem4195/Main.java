@@ -22,13 +22,9 @@ public class Main {
     static int[] PARENT, RANK, RELATION;
     static int MAX = 100001;
     
-    
     public static void main(String[] args) throws IOException {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        
-        OutputStreamWriter osw = new OutputStreamWriter(System.out);
-        BufferedWriter bw = new BufferedWriter(osw);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int testCase = Integer.parseInt(br.readLine());
         
@@ -66,10 +62,8 @@ public class Main {
 
         bw.flush();
         bw.close();
-        osw.close();
         
         br.close();
-        isr.close();
     }
 
 
