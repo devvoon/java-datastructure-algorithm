@@ -59,6 +59,7 @@ public class Main {
                 }
             }
             Collections.sort(result);
+            //감염되는 컴퓨터 수, 마지막 컴퓨터가 감염되기까지 걸리는 시간 출력
             System.out.println(count + " " + result.get(result.size()-1));
         }
     }
@@ -66,23 +67,37 @@ public class Main {
     public static void dijkstra(int start){
         PriorityQueue<Node> pq = new PriorityQueue<>();
         
+        //출발노드의 비용은 0
         distance[start] = 0;
         pq.offer(new Node(start, distance[start]));
         
+        //최단경로 찾기 = distacne[] 를 채우는 과정 (bfs와 유사)
         while(!pq.isEmpty()) {
+            
+            //현재 출발 노드 from
             Node from = pq.poll();
             
-            if (from.cost > distance[from.index]) {
+            //현재 노드 -> dest로 이동 비용 > dest까지 최단거리 비용보다 크다면 
+            if (from.cost > distance[from.dest]) {
+                //구할 의미 없음 다음 노드 뽑기
                 continue;
             }
             
-            for (Node to : adjacent[from.index]) {
-                if (distance[to.index] > distance[from.index] + to.cost) {
-                    if (distance[to.index] == INF) {
+            //현재 노드에서 연결된 목적지 노드까지의 최소비용 구하기
+            for (Node to : adjacent[from.dest]) {
+                
+                //목적지까지의 최소 비용 > dest까지의 최소 이동비용 + 목적지까지 비용
+                if (distance[to.dest] > distance[from.dest] + to.cost) {
+                    // 목적지 노드비용이 초기값이면 
+                    if (distance[to.dest] == INF) {
+                        // 방문
                         count++;
                     }
-                    distance[to.index] = distance[from.index] + to.cost;
-                    pq.offer(new Node(to.index, distance[to.index]));
+                    
+                    //목적지까지 최소비용 = dest까지의 최소이동 비용+ 현재노드에서 목적지까지 비용
+                    distance[to.dest] = distance[from.dest] + to.cost;
+                    //목적지노드 pq에 넣어주기
+                    pq.offer(new Node(to.dest, distance[to.dest]));
                 }
             }
             
@@ -91,11 +106,11 @@ public class Main {
     }
     
     public static class Node implements Comparable<Node>{
-        private int index;
-        private int cost;
+        private int dest;  // 노드에 연결된 목적지 노드 
+        private int cost;  // 목적지(dest)까지의 비용
         
-        public Node(int index, int cost){
-            this.index = index;
+        public Node(int dest, int cost){
+            this.dest = dest;
             this.cost = cost;
         }
 
