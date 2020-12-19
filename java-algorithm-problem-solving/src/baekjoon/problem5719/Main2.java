@@ -11,7 +11,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
- *  5719 거의 최단 경로
+ *  5719 거의 최단 경로 - 메모리초과로 실패
  * 
  * @author iamdawoonjeong
  * @reference https://www.acmicpc.net/problem/5719
@@ -22,7 +22,7 @@ public class Main2 {
     public static ArrayList<Node>[] reverseAdjacent;
     public static int[] distance;
     public static boolean[][] dropped;
-    public static int INF = 100001;
+    public static int INF =  Integer.MAX_VALUE;
     
     public static void main(String[] args) throws IOException {
 

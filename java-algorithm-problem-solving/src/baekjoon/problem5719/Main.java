@@ -13,7 +13,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
- *  5719 거의 최단 경로
+ *  5719 거의 최단 경로 - 메모리 초과로 실패
  * 
  * @author iamdawoonjeong
  * @reference https://www.acmicpc.net/problem/5719
