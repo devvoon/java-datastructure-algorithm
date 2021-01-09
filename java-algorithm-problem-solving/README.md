@@ -107,3 +107,13 @@
 | **1915**  | [가장 큰 정사각형](https://www.acmicpc.net/problem/1915)		               | Ⅱ    | DP                            | O(n<sup>2</sup>)/O(n)	| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-1915/)    |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1915/Main.java)   |    
 | **12849** | [본대 산책](https://www.acmicpc.net/problem/12849)		                       | Ⅱ    | DP                            | O(n<sup>2</sup>)/O(n)	| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-12849/)   |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem12849/Main.java)  |    
    
+
+### 탐욕 Greedy
+
+| Index  	| Problem                                                                      | Level | Category    				   | Time / Space Complexity                                                                                                                | Solution	| Source	|
+|:----------|:-----------------------------------------------------------------------------|:------|:------------|:------|:------|:------|
+| **5585**  | [거스름돈](https://www.acmicpc.net/problem/5585)					           | Ⅰ 	  | Greedy                         | O(nlogn)/O(n)			| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-5585/)    |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem5585/Main.java)   |
+| **1439**  | [뒤집기](https://www.acmicpc.net/problem/1439)					               | Ⅰ 	  | Greedy                         | O(nlogn)/O(n)			| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-1439/)    |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1439/Main.java)   |
+| **2012**  | [등수매기기](https://www.acmicpc.net/problem/2012)					           | Ⅰ 	  | Greedy                         | O(nlogn)/O(n)			| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-2012/)    |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1439/Main.java)   |
+| **1092**  | [배](https://www.acmicpc.net/problem/1092)					                   | Ⅱ 	  | Greedy                         | O(nlogn)/O(n)			| [문제풀이보기](http://dawoonjeong.com/algorithm-problem-solving-baekjoon-1092/)    |  [소스보기](https://github.com/iamdawoonjeong/java-datastructure-algorithm/blob/master/java-algorithm-problem-solving/src/baekjoon/problem1092/Main.java)   |
+
