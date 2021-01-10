@@ -71,8 +71,7 @@ public class Main {
             
             //모든 크레인에 대한 처리
             for (int i = 0; i < n; i++) {
-                
-                System.out.println(i );
+            
                //아직 안 옮긴 박스 중에서 , 옮길 수 있는 박스를 만날 때까지 반복
                 while(position[i] < box.length) {
                     
