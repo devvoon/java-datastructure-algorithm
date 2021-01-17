@@ -3,7 +3,13 @@ package baekjoon.problem1236;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
+/**
+ * 1236 성 지키기 
+ * 
+ * @author iamdawoonjeong
+ * @reference https://www.acmicpc.net/problem/1236
+ *
+ */
 public class Main {
 
     public static void main(String[] args) throws Exception {
