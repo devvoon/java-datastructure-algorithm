@@ -28,6 +28,7 @@ public class Main {
             arr[i][1] = Integer.parseInt(st.nextToken());
         }
         
+        //이차원 배열 정렬
         Arrays.sort(arr, new Comparator<int[]>() {
 
             @Override
@@ -45,7 +46,8 @@ public class Main {
         
         for (int i = 0; i < arr.length; i++) {
             int deadline = arr[i][0];  //데드라인 
-            queue.add(arr[i][1]); //컵라면 갯수 
+            queue.add(arr[i][1]); //컵라면 갯수
+            //pq이기때문에 작은 수가 빠짐 
             if (deadline < queue.size()) {
                 queue.poll();
             }
