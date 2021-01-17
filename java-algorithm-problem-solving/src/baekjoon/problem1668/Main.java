@@ -1,4 +1,4 @@
-package baekjoon.problem1688;
+package baekjoon.problem1668;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
