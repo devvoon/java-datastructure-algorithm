@@ -14,8 +14,8 @@ import java.util.StringTokenizer;
 public class Main {
     
     public static Node[] tree;
-    public static int[] levelMin;
-    public static int[] levelMax;
+    public static int[] widthMin;
+    public static int[] widthMax;
 
     public static int levelDepth;
     public static int nodeIndex = 1;
@@ -26,18 +26,18 @@ public class Main {
         StringTokenizer st;
         int n = Integer.parseInt(br.readLine());  // 노드의 갯수 
         tree = new Node[n+1]; //노드의 갯수만큼 트리 만들기 
-        levelMin = new int [n+1]; // 최소레벨
-        levelMax = new int [n+1]; // 최대레벨
+        widthMin = new int [n+1]; // 최소레벨
+        widthMax = new int [n+1]; // 최대레벨
         int root = -1;
 
         // 노드를 각각 만들어줌
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i < n+1; i++) {
             tree[i] = new Node(i, -1, -1, -1);
-            levelMin[i] = n;
-            levelMax[i] = 0;
+            widthMin[i] = n;
+            widthMax[i] = 0;
         }
         
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i < n+1; i++) {
            st = new StringTokenizer(br.readLine());
            int data = Integer.parseInt(st.nextToken());
            int left = Integer.parseInt(st.nextToken());
@@ -47,30 +47,35 @@ public class Main {
            tree[data].left = left;
            tree[data].right = right;
            
-           //자식 노드가 없다면 부모노드 입력
+           //left 노드값이 있다면, left노드의 부모값을 현재 노드 값으로 입력 
            if( left != -1) {
                tree[left].parent = data;
            }
            
-           //자식 노드가 없다면 부모노드 입력
+           //right 노드값이 있다면, right노드의 부모값을 현재 노드의 값으로 입력
            if ( right != -1) {
                tree[right].parent = data;
            }
         }
         
+        //최상의 노드 찾기
         for(int i = 1; i <= n; i++) {
+            //현노드의 부모가 없는 경우 = -1인경우
             if(tree[i].parent == -1) {
+                //루트임
                 root = i;
             }
         }
         
+        //루트 1레벨부터 출발
         dfs(root, 1);
         
         int resultLevel = 1;
-        int resultWidth = levelMax[1] - levelMin[1] + 1;
+        int resultWidth = widthMax[1] - widthMin[1] + 1;
+        
         
         for (int i = 2; i <= levelDepth; i++) {
-            int width = levelMax[i] - levelMin[i] +1;
+            int width = widthMax[i] - widthMin[i] +1;
             
             if (resultWidth < width) {
                 resultLevel = i;
@@ -95,12 +100,13 @@ public class Main {
         
         levelDepth = Math.max(levelDepth, level);
         
+        //중위순회 
         if (node.left != -1) {
             dfs(node.left, level+1);
         }
         
-        levelMin[level] = Math.min(levelMin[level], nodeIndex);
-        levelMax[level] =  Math.max(levelMax[level], nodeIndex);
+        widthMin[level] = Math.min(widthMin[level], nodeIndex);
+        widthMax[level] =  Math.max(widthMax[level], nodeIndex);
         nodeIndex++;
         
         if(node.right != -1) {
