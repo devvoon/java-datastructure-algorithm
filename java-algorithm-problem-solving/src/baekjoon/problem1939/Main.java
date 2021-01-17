@@ -30,7 +30,7 @@ public class Main {
         graph = new ArrayList[n+1];
         
         //입력된 섬의 갯수만큼 정점을 만듦 
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i < n+1; i++) {
             //adjacent 
             graph[i] = new ArrayList<Vertex>();
         }
