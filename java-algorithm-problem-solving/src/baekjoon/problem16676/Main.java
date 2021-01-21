@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * 16676 근우의 다이어리 꾸미기
  * 
- * @references https://www.acmicpc.net/problem/1439
+ * @references https://www.acmicpc.net/problem/16676
  * @author iamdawoonjeong
  */
 public class Main {
