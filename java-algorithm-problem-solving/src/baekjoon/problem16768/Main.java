@@ -138,9 +138,10 @@ public class Main {
                 }
             }
             for (int j = 0; j < n-temp.size(); j++) {
-                arr[j][i] = 0 ;
+                arr[j][i] = 0 ; // 0으로 바꿔주고
             }
             for (int j = n-temp.size(); j < n ; j++) {
+                //담아놓은 숫자를 아래에서 채우기 
                 arr[j][i] = temp.get(j - (n - temp.size()));
             }
         }
