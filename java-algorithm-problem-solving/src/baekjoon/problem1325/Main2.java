@@ -59,7 +59,7 @@ public class Main2 {
         queue.add(start);
         boolean[] visited = new boolean[n+1];
         visited[start] = true;
-        int count = 0;
+        int count = 1;
         while(!queue.isEmpty()) {
             int node = queue.poll();
             

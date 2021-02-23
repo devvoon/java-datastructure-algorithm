@@ -18,14 +18,14 @@ public class Main {
 
     public static ArrayList<Integer> adjacent[];
     public static int[] result ;
-    public static int n, m;
+    public static int n;
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         
         n = Integer.parseInt(st.nextToken());  //정점의갯수 
-        m = Integer.parseInt(st.nextToken());  //관계갯수 
+        int m = Integer.parseInt(st.nextToken());  //관계갯수 
         
         adjacent = new ArrayList[n+1];
         
@@ -66,7 +66,6 @@ public class Main {
         boolean[] visited = new boolean[n+1];
         visited[vertex] = true;
         queue.add(vertex);
-        
         while(!queue.isEmpty()) {
             int value = queue.poll();
 
