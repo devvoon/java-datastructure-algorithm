@@ -39,10 +39,11 @@ public class Main2 {
         }
         
         int max = 0;
-        for (int i = 1; i < n+1; i++) {
-            max  = Math.max(max, result[i]);
+
+        for (int i : result) {
+            max = Math.max(i, max);
         }
-        
+
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i < n+1; i++) {
             if (max == result[i]) {
@@ -63,7 +64,7 @@ public class Main2 {
         while(!queue.isEmpty()) {
             int node = queue.poll();
             
-            for (int i = 1; i < n; i++) {
+            for (int i = 1; i < n+1; i++) {
                 if (adjacent[node][i] == 1 && !visited[i]) {
                     queue.add(i);
                     visited[i] = true;
@@ -75,5 +76,4 @@ public class Main2 {
         return count;
         
     }
-
 }
