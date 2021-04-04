@@ -19,7 +19,7 @@ public class Main {
          
          String arr[]  = strings.split(" ");
          
-         boolean ascending = false;
+         boolean ascending = false; 
          boolean descending = false;
 
          for (int i = 1; i < arr.length; i++) {
