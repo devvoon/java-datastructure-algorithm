@@ -181,7 +181,7 @@ Integer.valueOf(100, 16; //16진수 100은 10진수 256
 |:------:|:-------------------------------:|:-------------------:|:--------------------------------------:|
 | ~      | 1의보수 1->0, 0->1              | bitwise not         | tilde 틸드                             |
 | &      | 둘 다 1인 경우에만 1, 그 외는 0 | bitwise and         | and, ampersand, 앰퍼센드               |
-| `|`    | 하나라도 1이면 1, 둘다 0이면 0  | bitwise or          | or, vertical bar, 버티컬바             |
+|        | 하나라도 1이면 1, 둘다 0이면 0  | bitwise or          | or, vertical bar, 버티컬바             |
 | ^      | 같으면 0, 다르면 1              | bitwise xor         | xor, circumflex/caret, 서컴플렉스/카릿 |
 | <<     | 왼쪽으로 비트 이동              | bitwise left shift  | left shift                             |
 | >>     | 오른쪽으로 비트 이동            | bitwise right shift | right shift                            |
