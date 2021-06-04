@@ -16,20 +16,19 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         String n = br.readLine();
-        int lenght = n.length();
+        int length = n.length();
         
         String max = "" ;
-        for (int i = 0; i < lenght; i++) {
+        for (int i = 0; i < length; i++) {
             max = max.concat("1");
         }
         
-        System.out.println(max);
-        if (lenght == 1) {
+        if (length == 1) {
             System.out.println(1);
         }else if ( Integer.parseInt(n) >= Integer.parseInt(max)) {
-            System.out.println(lenght);
+            System.out.println(length);
         }else {
-            System.out.println(lenght-1);
+            System.out.println(length-1);
         }
     }
 
