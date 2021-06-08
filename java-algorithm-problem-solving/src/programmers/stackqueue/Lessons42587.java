@@ -1,4 +1,4 @@
-package programmers.lessons42587;
+package programmers.stackqueue;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  * @reference https://programmers.co.kr/learn/courses/30/lessons/42587
  * @author iamdawoonjeong
  */
-public class Solution {
+public class Lessons42587 {
 
     public static void main(String[] args) {
 

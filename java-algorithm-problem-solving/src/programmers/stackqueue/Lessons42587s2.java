@@ -1,4 +1,4 @@
-package programmers.lessons42587;
+package programmers.stackqueue;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -10,7 +10,7 @@ import java.util.Queue;
  * @reference https://programmers.co.kr/learn/courses/30/lessons/42587
  * @author iamdawoonjeong
  */
-public class Solution2 {
+public class Lessons42587s2 {
 
     public static void main(String[] args) {
         int[] input = new int[]{2, 1, 3, 2}; // {7,1,5,6};//{1,1,9,1,1,1}; //

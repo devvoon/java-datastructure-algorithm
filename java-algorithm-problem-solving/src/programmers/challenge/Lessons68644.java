@@ -1,4 +1,4 @@
-package programmers.lessons68644;
+package programmers.challenge;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -10,7 +10,7 @@ import java.util.HashSet;
  * @author iamdawoonjeong
  *
  */
-public class Solution {
+public class Lessons68644 {
 
     public static void main(String[] args) {
         

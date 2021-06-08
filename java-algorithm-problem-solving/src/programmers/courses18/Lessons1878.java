@@ -1,4 +1,4 @@
-package programmers.lessons1878;
+package programmers.courses18;
 
 import java.util.HashMap;
 
@@ -8,7 +8,7 @@ import java.util.HashMap;
  * @author iamdawoonjeong
  * @reference https://programmers.co.kr/learn/courses/18/lessons/1878
  */
-public class Solution {
+public class Lessons1878 {
 
     public static void main(String[] args) {
         
