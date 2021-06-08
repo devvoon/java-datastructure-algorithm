@@ -1,4 +1,4 @@
-package groom.exam43060;
+package groom;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.TreeMap;
 
-public class Main {
+public class Exam43060 {
 
     public static void main(String[] args) throws IOException {
         
