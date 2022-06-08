@@ -23,23 +23,23 @@ public class Main {
         int right = 0;
         int sum = 0;
         
+        //첫번째 기둥과 마지막 블록 제외
         for (int i = 1; i < width-1; i++) {
             left = 0;
             right = 0;
            
+            // 왼쪽에서 가장 높은 블록
             for (int j = 0; j < i; j++) {
                 left = Math.max(left, arr[j]);
-                System.out.println("left : " + left);
             }
             
+            // 오른쪽에서 가장 높은 블록
             for (int j = i+1; j < width; j++) {
                 right = Math.max(right, arr[j]);
-                System.out.println("right : " + right);
             }
             
             if (arr[i] < left && arr[i] < right) {
                 sum += Math.min(left, right) - arr[i];
-                System.out.println(sum);
             }
         }
         

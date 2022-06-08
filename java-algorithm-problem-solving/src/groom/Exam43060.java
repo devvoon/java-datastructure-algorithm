@@ -40,11 +40,9 @@ public class Exam43060 {
                             list.put(index, temp);
                             index++;
                         }
-
                     }
                 }
             }
-            
         }
         
         if (list.isEmpty()) {
